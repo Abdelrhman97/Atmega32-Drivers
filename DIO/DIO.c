@@ -250,6 +250,8 @@ u8 GetPortValue (PORTS Port)
 			ret_val = PIND; 
 			break;
 		
-		return ret_val; 
+		
 	}
+	
+	return ret_val; 
 }
