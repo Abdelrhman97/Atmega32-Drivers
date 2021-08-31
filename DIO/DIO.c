@@ -183,7 +183,7 @@ void SetPortValue (PORTS Port, u8 Val)
  
 u8 GetPinValue (PORTS Port, u8 PinNumber)
 {
-	u8 ret_val = LOW; 
+	volatile u8 ret_val = LOW; 
 	switch (Port)
 	{
 		case A: 
@@ -233,7 +233,7 @@ u8 GetPinValue (PORTS Port, u8 PinNumber)
 
 u8 GetPortValue (PORTS Port)
 {
-	u8 ret_val;
+	volatile u8 ret_val;
 	
 	switch (Port)
 	{
@@ -252,6 +252,5 @@ u8 GetPortValue (PORTS Port)
 		
 		
 	}
-	
 	return ret_val; 
 }
